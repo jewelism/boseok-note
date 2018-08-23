@@ -48,6 +48,9 @@
 
 [rxjs](javascript/lib/rxjs/rxjs.md)
 
+#### Tip
+
+[유사배열](javascript/tip/array-like.md)
 
 -------------------------------
 ## Front-End
