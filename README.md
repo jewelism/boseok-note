@@ -83,6 +83,8 @@
 
 [nginx 간단한 설정](server-side/nginx.md)
 
+[배포 자동화](server-side/auto-deploy.md)
+
 ---------------------------------
 ## Network
 
