@@ -83,9 +83,6 @@
 
 [nginx 간단한 설정](server-side/nginx.md)
 
-[개인서버 구축](server-side/private-server.md)
-
-
 ---------------------------------
 ## Network
 
@@ -93,7 +90,7 @@
 
 [http, https](cs/network/http.md)
 
-[인터넷 공유기, 소형 라우터와 ip](cs/network/home-router.md)
+[공유기와 ip주소, 개인서버구축](cs/network/home-router.md)
 
 ------------------------------
 ## 그 외 Computer Science
@@ -106,6 +103,8 @@
 ## Git
 
 [Git 간단 사용법](coop/git/git.md)
+
+[패스워드 변경시 로컬에 적용](coop/git/password.md)
 
 -----------------------
 ## 그 외...
