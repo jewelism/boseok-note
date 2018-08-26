@@ -101,7 +101,7 @@
 
 [Port Number](cs/port.md)
 
-[Processor와 Process, Thread](cs/processor.md)
+[Processor와 Process, Thread](cs/process.md)
 
 ------------------------
 ## Git
