@@ -85,6 +85,8 @@
 
 [배포 자동화](server-side/auto-deploy.md)
 
+[mysql](server-side/mysql.md)
+
 ---------------------------------
 ## Network
 
