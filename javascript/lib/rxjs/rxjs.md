@@ -146,6 +146,16 @@ promise.then(successFn, errorFn)
 
 Promise의 구조와도 유사하쥬?
 
+## 몇가지 오퍼레이터 소개
+```js
+fromEvent(inputElement, 'keyup') //엘리멘트의 이벤트 발생을 관찰한다.
+pluck('target', 'value') //위에서 관찰하는 엘리먼트의 값을 가져온다.
+filter(callback) /* js의 filter와 유사하다. callback에 (text)=> text.length>=3 이런식으로 작성하여 조건을 걸수있다.*/
+debounceTime(ms) /* ms에는 ms단위로 숫자를 적어준다. lodash의 debounce와 유사하다. 시간만큼 지난후 리턴. debounceTime은 input에 뭔가 입력하고, 자동으로 request를 하는것을 구현할때 유용하다.
+*/
+distinctUntilChanged //중복된 이벤트 제거
+flatMapLatest() /* 이전에 만들어진 observable을 무시하고 가장 마지막의 observable을 새로운 observable로 만들어준다. param의 예제로는 Promise가 가능하다. 이말은 Promise도 "스트림화"가 가능하다는것이다.*/
+```
 그 외 여러가지 객체들이나 오퍼레이터를 사용하고 싶다면..
 
 https://rxjs-dev.firebaseapp.com/api
@@ -218,3 +228,9 @@ myObservable
 1. Subject는 Observable처럼 구독할수있다.
 2. Subject는 Observable을 extends했다.
 3. Subject는 다른 Observable을 구독할수있다는 점에서 다름.
+
+### Reference
+
+https://www.slideshare.net/benlesh1/rx-js-and-reactive-programming-may-2015
+
+https://www.slideshare.net/sunhyouplee/vuejs-reactive-programming-vuetiful-korea-2nd
