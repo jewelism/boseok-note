@@ -95,7 +95,9 @@
 
 [안티패턴](design-pattern/anti/README.md)
 
-[Observer 패턴](design-pattern/observer)
+[Observer 패턴](design-pattern/observer.md)
+
+[FLUX](design-pattern/flux.md)
 
 ---------------------------------------
 ## Server-Side
