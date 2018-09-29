@@ -16,7 +16,7 @@ js는 싱글스레드인데 동시에 많은 이벤트들을 어떻게 처리할
 
 그래서 비동기 api가 존재하는 것이고, 대표적으로 아래의 web api이다.
 
-[web API](web-api.md) - DOM, xhr, timeout
+[web API](../api/web-api.md) - DOM, xhr, timeout
 
 이것들은 개발자가 접근할수없는, 호출만 가능한 스레드이다. (C++ API)
 
@@ -28,7 +28,7 @@ function sleep(delay) {
   while (Date.now() < start + delay);
 }
 console.log(0);
-setTimeout(()=>{
+setTimeout(() => {
   console.log(2);
   sleep(1000);
   console.log(3);
@@ -50,7 +50,7 @@ console.log(1);
 
 오래걸리는게 싫다면 아래의 워커 api를 사용하면 된다.
 
-[worker API](worker-api.md)
+[worker API](../api/worker-api.md)
 
 이것은 js의 싱글스레드의 한계를 극복할수있게 도와주는 api이다.
 
