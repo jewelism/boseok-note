@@ -48,7 +48,7 @@ localStorage, sessionStorage 키값 저장소가 있음.
 
 비동기api가 아니라서 큰 값 저장하기에는 무리가 있음.
 
-큰 값을 저장하고 싶다면 indexedDB를 사용
+큰 값을 저장하고 싶다면 indexedDB등의 DB를 사용
 
 getItem(문자열키) 
 
