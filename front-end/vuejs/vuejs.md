@@ -2,6 +2,8 @@
 
 ### 러닝커브 낮고 가벼운 ui 라이브러리
 
+[0. 튜토리얼](https://jewelism.gitbook.io/vuejs/)
+
 [1. react.js와 비교](compare-react.md)
 
 [2. vuex 상태 관리 라이브러리](vuex.md)
