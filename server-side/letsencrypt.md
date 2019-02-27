@@ -20,7 +20,7 @@ sudo letsencrypt certonly --standalone -d 도메인
 
 끝
 
----------------------------
+--------------------------
 
 맥에서는 방법이 조금 다릅니다.
 
@@ -29,6 +29,26 @@ homebrew에 letsencrypt 모듈이 없고,
 certbot을 대신 사용하면 됩니다.
 
 -----------------------
+
+## crontab을 이용한 auto renew
+
+3개월마다 인증서를 갱신해야하는데, 매번하는건 귀찮기도하고 까먹을수도 있으므로
+
+쉘스크립트와 크론탭을 사용하여 자동화시켜보겠다.
+
+```
+sudo wget https://dl.eff.org/certbot-auto && sudo chmod a+x certbot-auto && sudo mv certbot-auto /etc/letsencrypt/
+sudo crontab -e
+```
+에디터를 선택하고 열면, 아래 스크립트를 작성한다. nginx기준
+일주일에 한번, 2:45 시간에 맞춰서 자동으로 스크립트가 동작할것이다.
+```
+45 2 * * 6 cd /etc/letsencrypt/ && ./certbot-auto renew && sudo service nginx restart
+```
+
+ref: https://www.onepagezen.com/letsencrypt-auto-renew-certbot-apache/#step1
+
+---------------------------
 
 ### 트러블슈팅
 ```

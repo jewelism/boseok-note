@@ -8,6 +8,10 @@ static 파일을 제공할 수 있는 웹서버이다.
 
 ### 설치
 
+ubuntu 16 기준으로 작성하였습니다.
+
+ubuntu 18에서는 apt-get 명령어가 apt로 변경되었습니다.
+
 ```
 sudo apt-get update
 sudo apt-get install nginx
@@ -45,7 +49,7 @@ default 대신에 도메인을 정의하고
 정의한 도메인을 default에 설정해주면 된다.
 
 모듈로 관리해서 편해진다.
-```
+```nginx
 server {
   listen  80;
   server_name boseok.me;
@@ -69,8 +73,9 @@ server {
 
   server_name boseok.me;
 
-  #path뒤에 param을 설정할 수 있다. ex) location /boseok {...} 
+  # path뒤에 param을 설정할 수 있다. ex) location /boseok {...} 
   location / { 
+    # SPA이기때문에 설정해놓았습니다.
     try_files $uri $uri/ /index.html;
   }
 
