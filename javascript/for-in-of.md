@@ -17,10 +17,12 @@ let someArray = [1, 2, 3];
 someArray.boseok = 'boseok123';
 
 for (let i in someArray) {
-  console.log(i); // 1,2,3 'boseok', 'someArrayFunc'
+  console.log(i); // 0,1,2 'boseok', 'someArrayFunc'
 }
 
 for (let i of someArray) {
   console.log(i); //1,2,3
 }
 ```
+
+in 구문은 객체의 value를 나열하는게 아니라, key를 나열한다고 생각하면 됩니다.
