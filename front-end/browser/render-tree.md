@@ -12,8 +12,6 @@
 
 여기에서 reflow와, repaint라는 용어가 등장하는데,
 
-그 설명은 아래의 링크에서 자세하게 설명되어있다.
-
-https://github.com/nhnent/fe.javascript/wiki/Reflow%EC%99%80-Repaint
+[그 설명은 여기에서..](./reflow-repaint.md)
 
 reference : https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction?hl=ko
