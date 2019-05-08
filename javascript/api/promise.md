@@ -88,6 +88,7 @@ iterable 내의 모든 프로미스가 이행한 뒤 이행하고, 어떤 프로
 */
 Promise.race(iterable)
 //iterable 내의 어떤 프로미스가 이행하거나 거부하는 즉시 스스로 이행하거나 거부하는 프로미스를 반환합니다. 
+// 예를 들어, 프로미스가 여러개있을때 어떤 프로미스가 작업이 끝나면, 다른 프로미스들은 resolve 혹은 reject 되지않는다는 의미입니다. 이걸 활용하면 프로미스에 타임아웃을 구현할수있습니다.
 Promise.reject(reason)
 //주어진 이유로 거부하는 Promise 객체를 반환합니다.
 Promise.resolve(value)
@@ -98,5 +99,32 @@ Promise.resolve(value)
 아래의 스크린샷은 Promise.all을 사용한 예제입니다.
 <img src="images/promise-all-resolve.png">
 <img src="images/promise-all-reject.png">
+
+### Promise.race 예제
+```js
+const p1 = () => new Promise(resolve => {
+  console.log('p1');
+  setTimeout(()=>{
+    resolve('p1 resolved');
+  }, 1000);
+});
+
+const p2 = () => new Promise(resolve => {
+  console.log('p2');
+  setTimeout(()=>{
+    resolve('p2 resolved');
+  }, 2000);
+});
+
+const result = Promise.race([p1(), p2()]).then(console.log);
+```
+
+위 코드는 순서대로 콘솔에
+```bash
+p1
+p2
+p1 resolved
+```
+이렇게 프린팅합니다
 
 reference: https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise
