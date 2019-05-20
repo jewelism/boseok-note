@@ -36,14 +36,23 @@ certbot을 대신 사용하면 됩니다.
 
 쉘스크립트와 크론탭을 사용하여 자동화시켜보겠다.
 
-```
+```bash
 sudo wget https://dl.eff.org/certbot-auto && sudo chmod a+x certbot-auto && sudo mv certbot-auto /etc/letsencrypt/
 sudo crontab -e
 ```
+
+```bash
+sudo vi /etc/letsencrypt/renewal/${domain}.conf
+```
+아래 라인을 찾아서 앞에 #을 붙여서 주석처리해준다
+```
+# standalone_supported_challenges = "tls-sni-01,http-01"
+```
+
 에디터를 선택하고 열면, 아래 스크립트를 작성한다. nginx기준
 일주일에 한번, 2:45 시간에 맞춰서 자동으로 스크립트가 동작할것이다.
 ```
-45 2 * * 6 cd /etc/letsencrypt/ && ./certbot-auto renew && sudo service nginx restart
+45 2 * * 6 sudo service nginx stop && /etc/letsencrypt/certbot-auto renew && sudo service nginx start
 ```
 
 ref: https://www.onepagezen.com/letsencrypt-auto-renew-certbot-apache/#step1
