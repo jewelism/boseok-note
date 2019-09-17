@@ -46,6 +46,14 @@ pem 파일이 아닌 ppk를 키파일로 사용하는 경우 : SSH 키 비밀번
 ssh접속 시 도메인에 아이디를 붙이지 않는 경우 : Permission denied (publickey) 에러 발생
 ```
 
+아무 이상이없는데 permission denied가 계속 뜬다?
+
+그럼 아래의 known_hosts 파일을 확인해보자
+```
+vi ~/.ssh/known_hosts
+```
+이 파일을 봐도 모르겠다면 그냥 내용을 싹다 날리고 저장하자. 그럼 접속이 잘 된다.
+
 Reference
 
 http://blog.freezner.com/archives/1249
