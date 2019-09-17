@@ -36,3 +36,18 @@ Host *
 #linux
 ssh-add ~/.ssh/id_rsa
 ```
+
+
+ubuntu 에서 사용할 쉘스크립트를 작성해보았다.
+
+주의할점은 ssh-keygen의 default path가 mac과는 다르게(home) /root 이다.
+```bash
+#!/bin/bash
+
+ssh-keygen;
+
+eval 'ssh-agent';
+ssh-add /root/.ssh/id_rsa;
+cat /root/.ssh/id_rsa.pub;
+exit;
+```
