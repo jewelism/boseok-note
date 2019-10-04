@@ -80,10 +80,11 @@ counter.privateCounter; //undefined
 
 --------------------------------------------------
 
-하지만 이런구문은 실제로 사용하기를 권장하지않는다.
+하지만 클로저를 활용하는동안 GC가 메모리를 회수할수없다.
 
-GC가 메모리를 회수할수없다. 카운터를 만들때마다 각각의 카운터의 인스턴스는 privateCounter를 생성하므로 메모리낭비이다.
+카운터를 만들때마다 각각의 카운터의 인스턴스는 privateCounter를 생성하므로 메모리낭비이다.
 
-privateCounter에는 WeakMap, WeakSet을 사용하는것이 바람직하다.
-
-WeakMap, WeakSet은 다음 글에서 예정..
+그러므로 다 사용하고나면 counter에 null을 대입하여 gc가 작동할수 있도록 해줘야한다.
+```js
+counter = null;
+```
