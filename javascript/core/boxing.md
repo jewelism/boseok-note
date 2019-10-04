@@ -17,6 +17,13 @@ Boolean
 String
 Number
 ```
+
+new String('boseok')
+
+이런식으로도 문자열객체를 생성할수있다는뜻이다.
+
+------------------
+
 박싱 언박싱은.. 예를 들자면
 ```js
 1 === new Number(1) //false
