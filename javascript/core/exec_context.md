@@ -20,39 +20,6 @@ VO(Variable Object) - [arguments](arguments.md), parameter를 포함한 variable
 
 scope - 함수객체가 접근가능한 VO의 유효범위
 
-### 스코프체인
-
-id(식별자)를 찾기 위해 필요한것.
-
-스코프가 유효범위라고 했죠?
-
-스코프체인은 식별자가 어느정도 유효범위를 가지는지 알게해줍니다.
-
-예를들어
-
-```js
-function a(){
-  var v1 = 1;
-  console.log(v2); //ref error - not defined
-  function b(){
-    console.log(v1); //1
-    var v2 = 2;
-  }
-}
-```
-위의 코드에서 b라는 함수의 스코프에서는 변수 v1, v2를 참조할수있죠?
-
-b의 스코프에는 v2변수 밖에 없는데, 어떻게 v1을 참조할까요?
-
-바로 스코프체인때문입니다.
-
-스코프내에 다른 스코프가 있다면, 그것을 스코프체인 프로퍼티에 저장해놓는거죠.
-
-그래서 b함수 스코프에서 v1을 사용하면, v1을 b함수 스코프에서 탐색하고,
-
-없으면 이제 상위 스코프를 찾게되는데, 그 외부 스코프에 대한정보를 스코프체인이 갖고 있습니다.
-  
-한마디로 *스코프체인의 탐색은 해당하는 이름을 찾거나 외부 스코프의 참조가 null이 될때 탐색을 멈춥니다.*
 
 
 [추가적으로 참고할만한 좋은 글](https://velog.io/@tmmoond8/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EC%9D%B8%ED%84%B0%EB%B7%B0-%ED%9B%84%EA%B8%B0-%EB%A9%B4%EC%A0%91-%EC%A7%88%EB%AC%B8-%EC%A0%95%EB%A6%AC-%EC%9E%91%EC%84%B1-%EC%A4%91#5.-%EC%8B%A4%ED%96%89%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8)
