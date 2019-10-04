@@ -8,9 +8,7 @@ number
 null
 undefined
 ```
-null과 undefined를 제외한 3가지는 primitive 타입이며, 
-
-primitive wrapper 또한 존재한다.
+null과 undefined를 제외한 3가지는 primitive wrapper가 존재한다.
 
 단순히 첫글자가 대문자일뿐이다.
 
