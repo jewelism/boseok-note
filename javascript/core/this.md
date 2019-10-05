@@ -1,4 +1,4 @@
-## this와 arrow function
+# this와 arrow function
 
 자바스크립트에서는 특이하게도 this가 원하지않는대로 작동할수도있다.
 
