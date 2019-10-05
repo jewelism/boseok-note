@@ -60,4 +60,4 @@ obj.getP1(); //1
 ```
 다른 언어에 익숙한 사람은 function대신 arrow function을 사용하는게 원하는대로 작동해서 정신건강에 이롭다.
 
-혹은 ES5 스펙의 bind를 써도 좋다.
+혹은 ES5 스펙의 Function.prototype.bind를 써도 좋다.
