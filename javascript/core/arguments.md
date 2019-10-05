@@ -1,8 +1,8 @@
-## arguments
+# arguments
 
 함수에는 보이지않지만 argumnets라는 객체가 있습니다.
 
-```js
+```javascript
 function a(v1){
   console.log(v1, arguments);
 }
@@ -10,9 +10,9 @@ function a(v1){
 a('var1');
 ```
 
-### 결과
+## 결과
 
-<img src="./images/arguments.png">
+![](../../.gitbook/assets/arguments.png)
 
 신기하게도 arguments라는 변수가 없는데,
 
@@ -29,3 +29,4 @@ callee라는 함수도 보이네요.
 자기자신의 함수를 호출할 수 있겠네요.
 
 익명함수에서도 재귀함수를 구현할수있겠죠.
+

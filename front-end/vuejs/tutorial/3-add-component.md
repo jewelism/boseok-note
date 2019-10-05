@@ -1,4 +1,4 @@
-# 3. 컴포넌트 추가하기
+# 3-add-component
 
 이제 컴포넌트에 대한 감이 어느정도 잡혔습니다.
 
@@ -12,7 +12,7 @@
 
 템플릿, 스크립트, 스타일 순서로 코드를 작성하면 됩니다.
 
-```html
+```markup
 <template>
   <div class="text">
     Good Bye World!
@@ -23,11 +23,13 @@
 딱히 기능이 없는, div태그 하나뿐인 컴포넌트입니다.
 
 이제 바로 아래에 작성할 자바스크립트는
-```html
+
+```markup
 <script>
  <!--여기에 스크립트 작성-->
 </script>
 ```
+
 이런식으로 스크립트 태그안에 작성해주세요.
 
 vue/cli로 프로젝트를 생성하고 기본 소스코드를 보면
@@ -36,17 +38,19 @@ vue/cli로 프로젝트를 생성하고 기본 소스코드를 보면
 
 취향이므로 적절히 생략해주세요.
 
-같은 맥락(?)으로 객체 마지막 프로퍼티뒤에 콜론붙이는걸 좋아합니다. (배열제외)
-```js
+같은 맥락\(?\)으로 객체 마지막 프로퍼티뒤에 콜론붙이는걸 좋아합니다. \(배열제외\)
+
+```javascript
 export default {
   name: 'ByeWorld', //이름은 컴포넌트파일의 이름과 같게해주세요
 };
 ```
+
 마지막으로 스타일은 이렇게 작성해주세요
 
 마찬가지로 style태그로 꼭 묶어주세요
 
-```html
+```markup
 <style>
  <!--여기에 스타일 작성-->
 </style>
@@ -60,7 +64,7 @@ export default {
 
 모두 작성하셨다면 아래 그림과 같은 소스코드형태가 됩니다.
 
-<img src="images/3ByeWorld.png">
+![](../../../.gitbook/assets/3byeworld.png)
 
 정말 간단한 싱글파일컴포넌트를 작성해보았습니다.
 
@@ -70,9 +74,9 @@ export default {
 
 src/App.vue 를 열어주세요.
 
-먼저 스크립트 부분에 
+먼저 스크립트 부분에
 
-```js
+```javascript
 import ByeWorld from './components/ByeWorld.vue'
 ```
 
@@ -84,6 +88,7 @@ import한 ByeWorld컴포넌트를 components에도 추가해줍니다.
 
 설명대로 진행하셨다면, 소스코드는 아래그림처럼 됩니다.
 
-<img src="images/3app.png">
+![](../../../.gitbook/assets/3app.png)
 
 소스를 저장하시고 웹을 확인해보시면, 페이지 하단에 Good Bye World! 문구가 추가된걸 볼 수 있습니다.
+

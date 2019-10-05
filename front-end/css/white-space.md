@@ -1,4 +1,4 @@
-## 텍스트가 의도하지않게 line break 될때 - white-space
+# white-space
 
 div의 width는 충분한데 내부의 텍스트가 의도치않게 개행될때가 있다.
 
@@ -7,3 +7,4 @@ div의 width는 충분한데 내부의 텍스트가 의도치않게 개행될때
 ```css
   white-space: nowrap;
 ```
+

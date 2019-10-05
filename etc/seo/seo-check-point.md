@@ -1,16 +1,16 @@
-## SEO Check Point
+# SEO Check Point
 
-*구글검색 기준입니다
+\*구글검색 기준입니다
 
-### 웹사이트내 링크
+## 웹사이트내 링크
 
 깨진 링크가 있는지 확인하는것은 필수다.
 
 구글크롤러가 깨진링크를 발견하면 좋은 웹사이트 점수를 얻을 수 없다.
 
-### 키워드
+## 키워드
 
-```
+```text
 1. 내용
 첫 단락에 키워드 넣기
 동의어/LSI 사용
@@ -32,7 +32,7 @@ H2와 H3 안에 동의어 사용
 하지만 너무 많은 키워드를 중복적으로 넣는 키워드 스터핑(Keyowrd Stuffing)은 좋지 않습니다. 그래서 적절한 수의 키워드와 동일어를 섞어 사용하는 것이 좋습니다.
 ```
 
-```
+```text
 1. Robots.txt
 
 2. 사이트맵(Sitemap.xml)
@@ -52,5 +52,5 @@ H2와 H3 안에 동의어 사용
 사이트 모바일 최적화
 ```
 
+ref: [https://www.twinword.co.kr/blog/google-seo-checklist/](https://www.twinword.co.kr/blog/google-seo-checklist/)
 
-ref: https://www.twinword.co.kr/blog/google-seo-checklist/

@@ -1,8 +1,8 @@
-## TCP, UDP
+# tcp-udp
 
-### TCP (Transmission Control Protocol)
+## TCP \(Transmission Control Protocol\)
 
-TCP프로토콜을 사용하면 
+TCP프로토콜을 사용하면
 
 클라이언트가 서버에 접속하기 위해서 연결하는 과정이 있는데
 
@@ -18,9 +18,7 @@ TCP는 UDP와는 다르게 handshake와 에러제어, 흐름제어 등의 기능
 
 하지만 요즘 시대에 네트워크가 에러나는 경우는 극히 드물다고한다
 
--------------------------
-
-### UDP (User Datagram Protocol)
+## UDP \(User Datagram Protocol\)
 
 TCP에서 언급한 것처럼, 연결하는 과정이 없다.
 
@@ -35,3 +33,4 @@ TCP에서 언급한 것처럼, 연결하는 과정이 없다.
 스타크래프트에서 UDP로 게임을 해본적이 있으신가요? 그 UDP가 여기서 설명하는 UDP입니다.
 
 인터넷방송에서 1프레임정도 누락되는 것은 사실 체감도 안되고 크리티컬하지도 않을 것이다.
+

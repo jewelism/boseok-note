@@ -1,11 +1,12 @@
-## v-model 디렉티브에 props 사용하기?
+# v-model-with-props
 
 vuetify 라이브러리를 사용하여 개발하는도중, 문제가 생겼다.
 
 v-text-field라는 vuetify에서 제공하는 컴포넌트를 사용하고싶었다.
 
 그리고 그 컴포넌트를 감싸고있는 똑같은 모양의 검색바를 만들고 사용하는데,
-```
+
+```text
 <div class="searchBarWrapper">
   <div></div>
   <div class="searchBar">
@@ -16,9 +17,10 @@ v-text-field라는 vuetify에서 제공하는 컴포넌트를 사용하고싶었
   </div>
 </div>
 ```
+
 이런모양의 템플릿을 매번 게시판마다 넣어줘야해서, 컴포넌트화를 시켰다.
 
-v-model으로 받는 데이터(상태)가 바뀌어야하는데,
+v-model으로 받는 데이터\(상태\)가 바뀌어야하는데,
 
 그 데이터를 props로 받기때문에, 변경할수없는문제가 생겼다.
 
@@ -33,7 +35,8 @@ props로 내려서 문자열 변경을 감지하는 방법을 사용했다.
 그래서 바로바로 입력에 반응하는 양방향바인딩 v-model 디렉티브를 props와 함께 사용하는 방법을 아래에서 소개한다.
 
 우선 검색바 컴포넌트이다. 템플릿은 위에 작성되어있다.
-```js
+
+```javascript
 export default {
     name: 'SearchBar',
     props: {
@@ -74,12 +77,14 @@ v-model을 computed로 바인딩했다.
 props로 handleChangeText메소드만 간단하게 구현해주면된다.
 
 부모컴포넌트의 템플릿
-```html
+
+```markup
 <search-bar :handle-change-text="handleChangeSearchText"/>
 ```
 
 메소드
-```js
+
+```javascript
 handleChangeSearchText(text) {
   this.searchInputText = text;
 },

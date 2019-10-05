@@ -1,4 +1,4 @@
-## nginx
+# nginx
 
 static 파일을 제공할 수 있는 웹서버이다.
 
@@ -6,19 +6,20 @@ static 파일을 제공할 수 있는 웹서버이다.
 
 서버에 많은 부하가 생길 경우의 성능을 예측하기 쉽게 해준다.
 
-### 설치
+## 설치
 
 ubuntu 16 기준으로 작성하였습니다.
 
 ubuntu 18에서는 apt-get 명령어가 apt로 변경되었습니다.
 
-```
+```text
 sudo apt-get update
 sudo apt-get install nginx
 ```
+
 웹브라우저에 ip주소를 입력하고 접속하면 welcome to nginx 화면이 나온다.
 
-```
+```text
 1. 서비스 목록을 확인
  - service --status-all|grep +
 2. 방화벽 확인
@@ -32,16 +33,18 @@ sudo apt-get install nginx
  - stop 외에 start, restart, reload, disable, enable 명령어가 있다.
 5. cd /var/www/html => build 된 project를 deploy하면 된다.
 6. 로그 확인
- - /var/log/nginx/access.log 혹은 error.log 
+ - /var/log/nginx/access.log 혹은 error.log
 ```
 
-### 간단한 설정 방법
+## 간단한 설정 방법
 
 ubuntu 16버전 이상 기준 설정파일이 있는곳
-```
+
+```text
 vi /etc/nginx/sites-available/default
 vi /etc/nginx/nginx.conf
 ```
+
 nginx에 여러개의 웹이 올라갈거라면
 
 default 대신에 도메인을 정의하고
@@ -49,7 +52,8 @@ default 대신에 도메인을 정의하고
 정의한 도메인을 default에 설정해주면 된다.
 
 모듈로 관리해서 편해진다.
-```nginx
+
+```text
 server {
   listen  80;
   server_name boseok.me;
@@ -81,3 +85,4 @@ server {
 
 }
 ```
+

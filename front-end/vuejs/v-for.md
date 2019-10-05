@@ -1,4 +1,4 @@
-## v-for 디렉티브
+# v-for
 
 v-for는 아마 v-if와 함께 템플릿에서 가장 많이 쓰게될 디렉티브이므로,
 
@@ -7,7 +7,8 @@ v-for는 아마 v-if와 함께 템플릿에서 가장 많이 쓰게될 디렉티
 우선, v-for는 말 그대로 반복을 의미합니다.
 
 예를들어, 스크립트에 아래와 같은 배열이 있다고 가정합시다.
-```js
+
+```javascript
 data: vm => ({
   cardList: [
     {text:'보석1', value:1},
@@ -20,13 +21,13 @@ data: vm => ({
 
 이것을 템플릿에 바인딩하기위해, v-for를 사용할수 있습니다.
 
-```html
+```markup
 <div v-for="(item, index) in cardList">{{item.text}}</div>
 ```
 
 대충 예상이 되시나요? 아래와 같이 렌더링되어야할겁니다!
 
-```html
+```markup
 <div>보석1</div>
 <div>보석2</div>
 <div>보석3</div>
@@ -65,6 +66,7 @@ index 1에 해당하는 배열은 기존 배열의 index 2에 해당하는 배�
 
 그러므로 key값을 index가 아닌 고유의 값으로 잘 설정해줍시다.
 
-```html
+```markup
 <div v-for="(item, index) in cardList" :key="item.value">{{item.text}}</div>
 ```
+

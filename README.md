@@ -1,3 +1,5 @@
+# README
+
 틀린 부분이나 오타 등의 지적을 알려주세요!
 
 이슈나 이메일 등 아무거나 다 좋습니다!!
@@ -6,29 +8,27 @@
 
 반말이 불편하시면 뒤로가기하세요!
 
---------------------------
 ## 목차
 
-[Javascript](#v8-engine-javascript)
+[Javascript](./#v8-engine-javascript)
 
-[Front-End](#front-end)
+[Front-End](./#front-end)
 
-[Design Pattern](#design-pattern)
+[Design Pattern](./#design-pattern)
 
-[Server-Side](#server-side)
+[Server-Side](./#server-side)
 
-[Network](#network)
+[Network](./#network)
 
-[Computer Science](#%EA%B7%B8-%EC%99%B8-computer-science)
+[Computer Science](./#그-외-computer-science)
 
-[Git](#git)
+[Git](./#git)
 
-[그 외...](#%EA%B7%B8-%EC%99%B8)
+[그 외...](./#그-외)
 
-----------------------------------
 ## V8 Engine Javascript
 
-#### Core
+### Core
 
 [var, let, const](javascript/es6/var-let-const.md)
 
@@ -44,7 +44,7 @@
 
 [박싱, 언박싱](javascript/core/boxing.md)
 
-#### ECMA Script
+### ECMA Script
 
 [for in, for of 차이](javascript/for-in-of.md)
 
@@ -52,8 +52,7 @@
 
 [async, await](javascript/es6/async-await.md)
 
-
-#### API, Libaray
+### API, Libaray
 
 [storage](javascript/storage.md)
 
@@ -67,14 +66,13 @@
 
 [rxjs](javascript/lib/rxjs/rxjs.md)
 
-#### Tip
+### Tip
 
 [유사배열](javascript/tip/array-like.md)
 
--------------------------------
 ## Front-End
 
-#### Core
+### Core
 
 [DOM](front-end/browser/dom.md)
 
@@ -84,24 +82,22 @@
 
 [렌더링 트리](front-end/browser/render-tree.md)
 
-#### Framework, Library
+### Framework, Library
 
 [vue.js](front-end/vuejs/vuejs.md)
 
-[vue.js 튜토리얼](front-end/vuejs/tutorial/README.md)
+[vue.js 튜토리얼]()
 
 [react.js](front-end/reactjs/reactjs.md)
 
--------------------------------
 ## Design-Pattern
 
-[안티패턴](design-pattern/anti/README.md)
+[안티패턴](design-pattern/anti.md)
 
 [Observer 패턴](design-pattern/observer.md)
 
 [FLUX](design-pattern/flux.md)
 
----------------------------------------
 ## Server-Side
 
 [AWS 접속](server-side/connect-aws.md)
@@ -112,7 +108,6 @@
 
 [mysql](server-side/mysql.md)
 
----------------------------------
 ## Network
 
 [TCP, UDP](cs/network/tcp-udp.md)
@@ -121,29 +116,27 @@
 
 [공유기와 ip주소, 개인서버구축](cs/network/home-router.md)
 
-------------------------------
 ## 그 외 Computer Science
 
 [Port Number](cs/port.md)
 
 [Processor와 Process, Thread](cs/process.md)
 
-------------------------
 ## Git
 
 [Git 간단 사용법](coop/git/git.md)
 
 [패스워드 변경시 로컬에 적용](coop/git/password.md)
 
------------------------
 ## 그 외...
 
 [CSR, SSR](front-end/csr-ssr.md)
 
-[REST](etc/rest/rest.md)
+[REST](etc/rest.md)
 
 [동기와 비동기](etc/sync-async.md)
 
 [react-native](front-end/react-native/react-native.md)
 
 [Unity 용어와 메소드](unity/methods.md)
+
