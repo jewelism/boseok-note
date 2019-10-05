@@ -37,18 +37,21 @@ catch도 then처럼 promise객체를 반환합니다.
 
 ```js
 function post(uriParams, body) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => 
       fetch(`${BASE_URL}/${uriParams}`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(body)
       }).then(res => res.json())
         .then(res => resolve(res))
-        .catch(err => reject(err));
-    });
+        .catch(err => reject(err))
+    );
   }
 ```
-
+```js
+//call
+post(${url}, {boseok: 'fe'}).then(res => {...});
+```
 [fetch API](fetch.md)에서 설명했던 예제 코드입니다.
 
 Promise의 생성자에 Callback이 있죠?
