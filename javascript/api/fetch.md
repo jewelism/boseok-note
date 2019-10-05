@@ -47,13 +47,13 @@ fetch(...)
   .then()
 ```
 
-위의 예제에서 res.json\(\)의 리턴값은 Promise객체입니다. 
+위의 예제에서 res.json\(\)의 리턴값은 Promise객체입니다.
 
 그래서 다시 then으로 체이닝하여 해당 리턴값을 받아서 처리할수있으며
 
 또한 catch로 체이닝하여, 에러핸들링을 할수있고, catch 뒤에 then을 다시 체이닝하여 finally에 해당하는 구문을 작성할 수 있습니다.
 
-현재 TC39 proposal	Stage 4 에 해당하는.. 사실상 표준이 된 Promise.prototype.finally 메소드를 사용할 수도 있습니다.
+현재 TC39 proposal Stage 4 에 해당하는.. 사실상 표준이 된 Promise.prototype.finally 메소드를 사용할 수도 있습니다.
 
 ```javascript
 const BASE_URL = 'http://...';
