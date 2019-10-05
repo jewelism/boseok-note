@@ -53,15 +53,13 @@ catch 뒤에 then을 다시 체이닝하여 finally에 해당하는 구문을 �
 const BASE_URL = 'http://...';
 
 function post(uriParams, body) {
-    return new Promise((resolve, reject) => {
-      fetch(`${BASE_URL}/${uriParams}`, {
+    return fetch(`${BASE_URL}/${uriParams}`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(body)
       }).then(res => res.json())
         .then(res => resolve(res))
         .catch(err => reject(err));
-    });
   }
 ```
 간단한 post 요청을 하는 예제입니다.
