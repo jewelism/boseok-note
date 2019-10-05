@@ -1,15 +1,16 @@
-## async, await
+# async-await
 
-### 스펙
-node.js는 8버전 이상부터 공식적으로 지원하고 있고,
-ES8 스펙입니다.
+## 스펙
 
-### 기본 설명
+node.js는 8버전 이상부터 공식적으로 지원하고 있고, ES8 스펙입니다.
+
+## 기본 설명
+
 async, await를 사용하면 비동기로직을 마치 동기적인것처럼 작성할 수 있습니다.
 
 기본적으로 async 라는 '키워드'는 함수 앞에 선언합니다.
 
-```js
+```javascript
 async function(){}
 
 async () => {}
@@ -23,7 +24,7 @@ await 뒤의 표현식은 Promise객체가 와야겠죠?
 
 그리고 async function은 Promise를 반환합니다.
 
-```js
+```javascript
 const somefunction = async () => {
   const myNum = await Promise.resolve(111);
   return myNum + 222;
@@ -31,10 +32,12 @@ const somefunction = async () => {
 somefunction()
   .then(console.log) //333
 ```
+
 글을 이해하셨다면, 333이 나올거란걸 예상하셨겠죠?
 
 하지만 아래의 예제를 봅시다
-```js
+
+```javascript
 const somefunction = async () => {
   const myNum = await 111;
   return myNum + 222;
@@ -48,7 +51,7 @@ somefunction()
 
 await는 Promise객체를 기다리는 것인데.. 숫자가오면 어떻게 될까요?
 
-async function에서 await 뒤의 표현식은 암묵적으로 Promise.resolve()로
+async function에서 await 뒤의 표현식은 암묵적으로 Promise.resolve\(\)로
 
 wrapping되기 때문에, 첫번째 예제와 같은 333이 콘솔에 찍히게 됩니다.
 
@@ -59,7 +62,8 @@ wrapping되기 때문에, 첫번째 예제와 같은 333이 콘솔에 찍히게 
 에러핸들링을 하려면, try-catch를 사용하여야 한다는 점에서 오히려 불편할 수도 있습니다.
 
 Mozila의 문서에 await를 잘 이해할 수 있을만한 좋은 예제가 있습니다
-```js
+
+```javascript
 function resolveAfter2Seconds(x) {
   return new Promise(resolve => {
     setTimeout(() => {
@@ -101,9 +105,9 @@ add2에서는 생성해둔 타이머를 동시에 시작합니다.
 
 Promise.all을 사용하면 됩니다.
 
-[그 예제는 여기에 있습니다.](promise.md)
+[그 예제는 여기에 있습니다.](https://github.com/jewelism/boseok-note/tree/955b71efb6653d12b51fe12bb7c6883cc9155ab9/javascript/es6/promise.md)
 
-### Tip - for문과 promise
+## Tip - for문과 promise
 
 어떠한 상황에서는 어떤 iterable객체에서 iterate하며
 
@@ -111,7 +115,7 @@ promise를 사용하고 싶을때가 있습니다.
 
 예를들어
 
-```js
+```javascript
 const API_LIST = [url1, url2, url3, ...];
 ```
 
@@ -121,7 +125,7 @@ for문을 사용해서 promise를 호출하는데,
 
 가독성을 위해 async await를 사용하고 싶다고 가정합니다.
 
-```js
+```javascript
 async function someFunction(urls) {
   for (const url of urls) {
     const res = await fetch(url);
@@ -140,7 +144,7 @@ async function someFunction(urls) {
 
 이렇게 되면 의미가 없죠? 그래서 해결방법을 가져왔습니다.
 
-```js
+```javascript
 async function someFunction(urls) {
   const somePromises = urls.map(url => {
     return fetch(url);
@@ -152,7 +156,8 @@ async function someFunction(urls) {
   }
 }
 ```
+
 이런식으로 작성하게된다면, 순차적으로 기다릴일은 없겠네요!
 
+reference : [https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/async\_function](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/async_function)
 
-reference : https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/async_function

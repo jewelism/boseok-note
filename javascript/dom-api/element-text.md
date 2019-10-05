@@ -1,4 +1,4 @@
-## HTML Element get Text
+# HTML Element get Text
 
 어떤 웹사이트의 테이블에서 데이터를 크롤링하다가 공부하게 됐다.
 
@@ -10,8 +10,9 @@ undefined가 뜨는경우가 간혹있더라. 텍스트노드가 또다른 노�
 
 그것을 해결하는것이 아래 코드이다.
 
-```js
+```javascript
 const text = el['innerText' in el ? 'innerText' : 'textContent'];
 ```
 
 이렇게 텍스트를 가져오게되면, 편하다.
+

@@ -1,2 +1,4 @@
-## Observer 패턴
+# observer
+
+
 

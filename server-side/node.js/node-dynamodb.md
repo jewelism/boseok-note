@@ -1,5 +1,6 @@
-## nodejs에서 dynamodb 사용하기
+# node-dynamodb
 
+## nodejs에서 dynamodb 사용하기
 
 ### 환경설정
 
@@ -34,11 +35,9 @@ Default output format [None]: json
 npm install aws-sdk -S
 ```
 
-------------------------
-
 ### 테이블 생성
 
-```js
+```javascript
 // config/dynamo.js
 const {AWS_REGION} = require('../../constants');
 
@@ -53,7 +52,7 @@ const docClient = new AWS.DynamoDB.DocumentClient();
 module.exports = {AWS, docClient};
 ```
 
-```js
+```javascript
 // constants/index.js
 const AWS_REGION = 'ap-northeast-2';
 const SURVEY_TABLE = 'moqa_web_survey';
@@ -61,7 +60,7 @@ const SURVEY_TABLE = 'moqa_web_survey';
 module.exports = {AWS_REGION, SURVEY_TABLE};
 ```
 
-```js
+```javascript
 // scripts/createSurveyTable.js
 const {AWS} = require('../../config/dynamo');
 
@@ -100,11 +99,9 @@ node scripts/createSurveyTable.js
 
 테이블이름 같은 경우는, get post put delete할때도 써야하므로 별도의 constants.js에서 관리합니다.
 
----------------------
-
 ## 테이블에서 데이터 조회
 
-```js
+```javascript
 const findAll = () => {
   return new Promise((resolve, reject) => {
     const params = {
@@ -124,11 +121,11 @@ const findAll = () => {
 };
 ```
 
-위 코드 블럭은 해당 테이블의 <b>모든 데이터</b>를 조회하는 function입니다.
+위 코드 블럭은 해당 테이블의 **모든 데이터**를 조회하는 function입니다.
 
 express사용시, 라우팅은 위의 함수를 활용하여 아래와 같이 작성합니다.
 
-```js
+```javascript
 router.get('/all', async (req, res, next) => {
   findAll().then(data => {
     res.status(200).send(data);
@@ -140,7 +137,7 @@ router.get('/all', async (req, res, next) => {
 
 모두 조회 후 author로 필터링
 
-```js
+```javascript
 router.get('/author/:author', async (req, res, next) => {
   const {author} = req.params;
 
@@ -153,9 +150,9 @@ router.get('/author/:author', async (req, res, next) => {
 });
 ```
 
-_id로 한개 조회하기
+\_id로 한개 조회하기
 
-```js
+```javascript
 router.get('/:_id', async (req, res, next) => {
   const {_id} = req.params;
 
@@ -180,6 +177,5 @@ docClient의 scan메소드와는 다르게, get을 사용하면 key로 설정해
 
 sort key가 있다면, sort key도 넣어야합니다.
 
------------------------
+ref: [https://docs.aws.amazon.com/ko\_kr/amazondynamodb/latest/developerguide/GettingStarted.NodeJs.html](https://docs.aws.amazon.com/ko_kr/amazondynamodb/latest/developerguide/GettingStarted.NodeJs.html)
 
-ref: https://docs.aws.amazon.com/ko_kr/amazondynamodb/latest/developerguide/GettingStarted.NodeJs.html

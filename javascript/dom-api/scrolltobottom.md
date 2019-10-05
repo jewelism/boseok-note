@@ -1,4 +1,4 @@
-## scroll to bottom 구현하기
+# scrollToBottom
 
 프론트어플리케이션을 개발하다보면, 특정 엘리먼트 위치로 스크롤하거나, 제일 하단, 상단스크롤이 필요할때가 많죠.
 
@@ -8,7 +8,7 @@
 
 우선 제일 하단으로 스크롤하는 함수입니다.
 
-```js
+```javascript
 export const scrollToBottom = element => {
   const el = element ? element : window;
   el.scrollBy({top: el.scrollHeight || 99999, behavior: 'smooth'});
@@ -19,7 +19,7 @@ export const scrollToBottom = element => {
 
 아래함수는 특정 엘리먼트가 가장 상단에 보이도록 스크롤합니다.
 
-```js
+```javascript
 export const scrollToElement = (element, block = 'start') => {
   if(!element)
     throw Error('no element');
@@ -33,4 +33,5 @@ export const scrollToElement = (element, block = 'start') => {
 
 end옵션을 주면, 해당엘리먼트가 스크롤영역 가장 하단에 보이게됩니다.
 
-신기(?)하게도 스크롤영역이 여러개여도, 알아서 해당엘리먼트가 있는 스크롤영역을 찾아서 스크롤합니다.
+신기\(?\)하게도 스크롤영역이 여러개여도, 알아서 해당엘리먼트가 있는 스크롤영역을 찾아서 스크롤합니다.
+
