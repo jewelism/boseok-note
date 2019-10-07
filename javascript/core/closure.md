@@ -60,9 +60,6 @@ var counter = (function() {
     increment: function(val) { 
       changeBy(val); 
     }, 
-    decrement: function(val) { 
-      changeBy(val); 
-    }, 
     value: function() { 
       return privateCounter; 
     } 
@@ -70,7 +67,7 @@ var counter = (function() {
 })();
 
 counter.value(); //0
-counter.increment(2)
+counter.increment(2);
 counter.value(); //2
 counter.privateCounter; //undefined
 ```

@@ -105,7 +105,7 @@ add2에서는 생성해둔 타이머를 동시에 시작합니다.
 
 Promise.all을 사용하면 됩니다.
 
-[그 예제는 여기에 있습니다.](https://github.com/jewelism/boseok-note/tree/955b71efb6653d12b51fe12bb7c6883cc9155ab9/javascript/es6/promise.md)
+[그 예제는 여기에 있습니다.](../api/promise.md)
 
 ## Tip - for문과 promise
 
