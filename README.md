@@ -1,4 +1,4 @@
-# 개발블로그입니다!
+# README
 
 틀린 부분이나 오타 등의 지적을 알려주세요!
 
@@ -8,10 +8,9 @@
 
 반말이 불편하시면 뒤로가기하세요!
 
----
-
-javascript개발자(FE)이므로 javascript에 관련된 내용들이 대부분입니다.
+javascript개발자\(FE\)이므로 javascript에 관련된 내용들이 대부분입니다.
 
 boseokjung@gmail.com
 
-https://jewelism.gitbook.io/boseok-note/
+[https://jewelism.gitbook.io/boseok-note/](https://jewelism.gitbook.io/boseok-note/)
+
