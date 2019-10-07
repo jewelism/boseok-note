@@ -12,5 +12,7 @@ javascript개발자\(FE\)이므로 javascript에 관련된 내용들이 대부�
 
 boseokjung@gmail.com
 
+https://github.com/jewelism/
+
 [https://jewelism.gitbook.io/boseok-note/](https://jewelism.gitbook.io/boseok-note/)
 
