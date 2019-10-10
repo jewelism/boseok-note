@@ -8,8 +8,6 @@ iterable하다는 것은 객체가 @@iterator 메소드를 구현했다는 것�
 
 이 말은 객체가 Symbol.iterator 키의 속성을 가져야한다는 것이다.
 
-iterator라는것은, next 메소드가 있어야합니다.
-
 ## Iterator Protocol
 
 객체가 next() 메소드를 갖고 있고, next 메소드는 done, value라는 속성을 가진 객체이다.
